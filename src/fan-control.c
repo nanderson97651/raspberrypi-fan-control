@@ -167,11 +167,11 @@ int main (void)
     initFanControl();
     initWiringPi();
     setupPwm();
-    //setupTacho();
+    setupTacho();
     sd_journal_print(LOG_INFO, "Initialized and running ...");
     while (keepRunning)	{
         setFanRpm();
-        //getFanRpm();
+        getFanRpm();
         delay(WAIT);
     }
     cleanup();
